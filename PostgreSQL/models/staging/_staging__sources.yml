@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: orders
+        description: "Table brute alimentée par le consumer Kafka."
+        loaded_at_field: created_at
+        freshness:
+          warn_after: {count: 10, period: minute}
+          error_after: {count: 30, period: minute}
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            tests:
+              - not_null
+          - name: amount
+            tests:
+              - not_null
+          - name: status
+            tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['completed', 'pending']
+          - name: created_at
+            tests:
+              - not_null
+
+          - name: order_date
+            description: "Date de la commande, issue de commandes.xlsx."
+          - name: customer_name
+            description: "Nom du client, issu de clients.xlsx (peut etre NULL si le client n'a pas de fiche)."
+          - name: region
+            description: "Region du client, issue de clients.xlsx."
+          - name: email
+            description: "Email du client, issu de clients.xlsx."
+

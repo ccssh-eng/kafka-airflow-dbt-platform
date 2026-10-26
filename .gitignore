@@ -1,0 +1,10 @@
+.env
+airflow/logs/
+PostgreSQL/target/
+PostgreSQL/logs/
+PostgreSQL/dbt_packages/
+.venv/
+__pycache__/
+*.pyc
+producer/data/*:Zone.Identifier
+certs/

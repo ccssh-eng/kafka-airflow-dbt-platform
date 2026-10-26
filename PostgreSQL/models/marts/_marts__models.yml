@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: mart_customers
+    description: "Agrégat des commandes par client : volume, montant total/moyen, première et dernière commande."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: nb_commandes
+        tests:
+          - not_null
+      - name: montant_total
+        tests:
+          - not_null
+

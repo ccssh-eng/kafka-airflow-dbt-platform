@@ -1,0 +1,217 @@
+[0m14:49:25.556359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c36d25fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c3579e710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c3579e6b0>]}
+
+
+============================== 14:49:25.573700 | 03e822e3-dc4f-48d0-86d4-15386c6fee40 ==============================
+[0m14:49:25.573700 [info ] [MainThread]: Running with dbt=1.12.2
+[0m14:49:25.575041 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'use_colors': 'True', 'write_json': 'True', 'printer_width': '80', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt init dbt', 'profiles_dir': '/home/devops/.dbt', 'quiet': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_format': 'default', 'warn_error': 'None', 'no_print': 'None', 'introspect': 'True', 'static_parser': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'log_path': 'logs'}
+[0m14:49:25.639513 [info ] [MainThread]: Creating dbt configuration folder at /home/devops/.dbt
+[0m14:50:41.664341 [debug] [MainThread]: Starter project path: /home/devops/kafka-airflow-dbt/.venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m14:50:41.688984 [info ] [MainThread]: Setting up your profile.
+[0m14:59:29.942804 [info ] [MainThread]: Profile PostgreSQL written to /home/devops/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m14:59:29.950746 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m14:59:29.951941 [info ] [MainThread]: dbt version: 1.12.2
+[0m14:59:29.952555 [info ] [MainThread]: python version: 3.10.12
+[0m14:59:29.953176 [info ] [MainThread]: python path: /home/devops/kafka-airflow-dbt/.venv/bin/python
+[0m14:59:29.953777 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m14:59:29.996997 [info ] [MainThread]: Using profiles dir at /home/devops/.dbt
+[0m14:59:29.998723 [info ] [MainThread]: Using profiles.yml file at /home/devops/.dbt/profiles.yml
+[0m14:59:29.999852 [info ] [MainThread]: Using dbt_project.yml file at /home/devops/kafka-airflow-dbt/PostgreSQL/dbt_project.yml
+[0m14:59:30.001916 [info ] [MainThread]: adapter type: postgres
+[0m14:59:30.002911 [info ] [MainThread]: adapter version: 1.11.0
+[0m14:59:30.193380 [info ] [MainThread]: Configuration:
+[0m14:59:30.194269 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:59:30.194680 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:59:30.195022 [info ] [MainThread]: Required dependencies:
+[0m14:59:30.195818 [debug] [MainThread]: Executing "git --help"
+[0m14:59:30.214457 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:59:30.215241 [debug] [MainThread]: STDERR: "b''"
+[0m14:59:30.215701 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:59:30.216186 [info ] [MainThread]: Connection:
+[0m14:59:30.216645 [info ] [MainThread]:   host: postgres
+[0m14:59:30.217059 [info ] [MainThread]:   port: 5432
+[0m14:59:30.217463 [info ] [MainThread]:   user: airflow
+[0m14:59:30.217871 [info ] [MainThread]:   database: airflow
+[0m14:59:30.218372 [info ] [MainThread]:   schema: public
+[0m14:59:30.218835 [info ] [MainThread]:   connect_timeout: 10
+[0m14:59:30.219349 [info ] [MainThread]:   role: None
+[0m14:59:30.219918 [info ] [MainThread]:   search_path: None
+[0m14:59:30.220345 [info ] [MainThread]:   keepalives_idle: 0
+[0m14:59:30.223889 [info ] [MainThread]:   sslmode: None
+[0m14:59:30.225384 [info ] [MainThread]:   sslcert: None
+[0m14:59:30.226224 [info ] [MainThread]:   sslkey: None
+[0m14:59:30.227192 [info ] [MainThread]:   sslrootcert: None
+[0m14:59:30.227892 [info ] [MainThread]:   application_name: dbt
+[0m14:59:30.228557 [info ] [MainThread]:   autocommit: False
+[0m14:59:30.230380 [info ] [MainThread]:   retries: 1
+[0m14:59:30.231209 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m14:59:30.356169 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m14:59:30.571562 [debug] [MainThread]: Using postgres connection "debug"
+[0m14:59:30.573020 [debug] [MainThread]: On debug: select 1 as id
+[0m14:59:30.573445 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:59:30.587422 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres" to address: Name or service not known
+
+[0m14:59:30.594745 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m14:59:30.596432 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m14:59:30.596906 [debug] [MainThread]: On debug: No close available on handle
+[0m14:59:30.597294 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m14:59:30.597740 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:59:30.598303 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgres" to address: Name or service not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m14:59:30.598980 [info ] [MainThread]: Your new dbt project "PostgreSQL" was created!
+Initialized new project in /home/devops/kafka-airflow-dbt/PostgreSQL/PostgreSQL
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:59:30.599732 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m14:59:30.607346 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 555.45276, "process_in_blocks": "2464", "process_kernel_time": 6.504968, "process_mem_max_rss": "116860", "process_out_blocks": "104", "process_user_time": 3.64723}
+[0m14:59:30.608576 [debug] [MainThread]: Command `dbt init` succeeded at 14:59:30.608301 after 555.45 seconds
+[0m14:59:30.609680 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:59:30.610331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c36d25fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c36a5a200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2c34942620>]}
+[0m14:59:30.610855 [debug] [MainThread]: Flushing usage events
+[0m14:59:31.113760 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:04:48.660669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4643df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb44eb26b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb44eb2620>]}
+
+
+============================== 15:04:48.665829 | fec4fa62-32db-481c-8dca-cee6a0ecd51f ==============================
+[0m15:04:48.665829 [info ] [MainThread]: Running with dbt=1.12.2
+[0m15:04:48.666513 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'use_colors': 'True', 'log_format': 'default', 'log_path': 'logs', 'printer_width': '80', 'use_experimental_parser': 'False', 'debug': 'False', 'maximum_seed_size_mib': '1', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': '/home/devops/.dbt', 'target_path': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'empty': 'None'}
+[0m15:04:48.685536 [info ] [MainThread]: dbt version: 1.12.2
+[0m15:04:48.686664 [info ] [MainThread]: python version: 3.10.12
+[0m15:04:48.691981 [info ] [MainThread]: python path: /home/devops/kafka-airflow-dbt/.venv/bin/python
+[0m15:04:48.692801 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m15:04:48.804147 [info ] [MainThread]: Using profiles dir at /home/devops/.dbt
+[0m15:04:48.805955 [info ] [MainThread]: Using profiles.yml file at /home/devops/.dbt/profiles.yml
+[0m15:04:48.808083 [info ] [MainThread]: Using dbt_project.yml file at /home/devops/kafka-airflow-dbt/dbt_project.yml
+[0m15:04:48.808910 [info ] [MainThread]: adapter type: postgres
+[0m15:04:48.809358 [info ] [MainThread]: adapter version: 1.11.0
+[0m15:04:48.809742 [info ] [MainThread]: Configuration:
+[0m15:04:48.810281 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:04:48.810685 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:04:48.811037 [info ] [MainThread]: Required dependencies:
+[0m15:04:48.811427 [debug] [MainThread]: Executing "git --help"
+[0m15:04:48.818261 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:04:48.818895 [debug] [MainThread]: STDERR: "b''"
+[0m15:04:48.819247 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:04:48.819949 [info ] [MainThread]: Connection:
+[0m15:04:48.820741 [info ] [MainThread]:   host: postgres
+[0m15:04:48.821441 [info ] [MainThread]:   port: 5432
+[0m15:04:48.822232 [info ] [MainThread]:   user: airflow
+[0m15:04:48.822742 [info ] [MainThread]:   database: airflow
+[0m15:04:48.823229 [info ] [MainThread]:   schema: public
+[0m15:04:48.823740 [info ] [MainThread]:   connect_timeout: 10
+[0m15:04:48.824221 [info ] [MainThread]:   role: None
+[0m15:04:48.824709 [info ] [MainThread]:   search_path: None
+[0m15:04:48.825464 [info ] [MainThread]:   keepalives_idle: 0
+[0m15:04:48.826013 [info ] [MainThread]:   sslmode: None
+[0m15:04:48.826861 [info ] [MainThread]:   sslcert: None
+[0m15:04:48.827843 [info ] [MainThread]:   sslkey: None
+[0m15:04:48.828483 [info ] [MainThread]:   sslrootcert: None
+[0m15:04:48.829097 [info ] [MainThread]:   application_name: dbt
+[0m15:04:48.829774 [info ] [MainThread]:   autocommit: False
+[0m15:04:48.830308 [info ] [MainThread]:   retries: 1
+[0m15:04:48.831035 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m15:04:48.933400 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m15:04:48.978845 [debug] [MainThread]: Using postgres connection "debug"
+[0m15:04:48.979605 [debug] [MainThread]: On debug: select 1 as id
+[0m15:04:48.980057 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:04:48.996248 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres" to address: Name or service not known
+
+[0m15:04:49.002295 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m15:04:49.002961 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m15:04:49.003551 [debug] [MainThread]: On debug: No close available on handle
+[0m15:04:49.004036 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:04:49.004662 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m15:04:49.005331 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/devops/kafka-airflow-dbt/dbt_project.yml> not found
+
+[0m15:04:49.006014 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgres" to address: Name or service not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:04:49.007534 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.47584397, "process_in_blocks": "8", "process_kernel_time": 0.71791, "process_mem_max_rss": "115004", "process_out_blocks": "32", "process_user_time": 2.53444}
+[0m15:04:49.008280 [debug] [MainThread]: Command `dbt debug` failed at 15:04:49.008122 after 0.48 seconds
+[0m15:04:49.010426 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:04:49.011482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb4643df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb44dcb310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb44dca7d0>]}
+[0m15:04:49.012156 [debug] [MainThread]: Flushing usage events
+[0m15:04:49.411651 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:23:03.529322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95ae4e5ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95acf5a740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95acf5a6e0>]}
+
+
+============================== 15:23:03.544390 | bd9b10ae-0f5b-4f49-879c-fa45bf0731c9 ==============================
+[0m15:23:03.544390 [info ] [MainThread]: Running with dbt=1.12.2
+[0m15:23:03.545218 [debug] [MainThread]: running dbt with arguments {'log_path': 'logs', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'introspect': 'True', 'no_print': 'None', 'profiles_dir': '/home/devops/.dbt', 'printer_width': '80', 'write_json': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'invocation_command': 'dbt init dbt', 'version_check': 'True', 'quiet': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'partial_parse': 'True', 'log_format': 'default', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'empty': 'None'}
+[0m15:24:15.982185 [info ] [MainThread]: A project called PostgreSQL already exists here.
+[0m15:24:15.984321 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 67.47926, "process_in_blocks": "16", "process_kernel_time": 4.445491, "process_mem_max_rss": "103064", "process_out_blocks": "16", "process_user_time": 2.766083}
+[0m15:24:15.985151 [debug] [MainThread]: Command `dbt init` succeeded at 15:24:15.984997 after 67.48 seconds
+[0m15:24:15.985670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95ae4e5ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95acf5afe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95acf5a680>]}
+[0m15:24:15.986613 [debug] [MainThread]: Flushing usage events
+[0m15:24:16.482846 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:33:00.665007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9022b89f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902144fb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902144fb20>]}
+
+
+============================== 13:33:00.672845 | 14ef4ee0-337a-4b18-8f9b-2f8f4c25a6a3 ==============================
+[0m13:33:00.672845 [info ] [MainThread]: Running with dbt=1.12.2
+[0m13:33:00.674019 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'invocation_command': 'dbt run', 'warn_error': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'static_parser': 'True', 'empty': 'False', 'log_path': 'logs', 'profiles_dir': '/home/devops/.dbt', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'target_path': 'None', 'hints_enabled': 'True', 'no_print': 'None', 'quiet': 'False', 'debug': 'False', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'write_json': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m13:33:00.674850 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/devops/kafka-airflow-dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:33:00.680746 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.29217353, "process_in_blocks": "86792", "process_kernel_time": 2.876531, "process_mem_max_rss": "102840", "process_out_blocks": "8", "process_user_time": 3.113422}
+[0m13:33:00.681572 [debug] [MainThread]: Command `dbt run` failed at 13:33:00.681361 after 0.29 seconds
+[0m13:33:00.682079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9022b89f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902144feb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f902144fb80>]}
+[0m13:33:00.682574 [debug] [MainThread]: Flushing usage events
+[0m13:33:01.203309 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:45:49.375278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4063699f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40622e6c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40622e6bc0>]}
+
+
+============================== 16:45:49.400438 | 9080a03c-25d0-4b40-9e98-a5efba30305c ==============================
+[0m16:45:49.400438 [info ] [MainThread]: Running with dbt=1.12.2
+[0m16:45:49.403699 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_format': 'default', 'target_path': 'None', 'printer_width': '80', 'log_path': 'logs', 'quiet': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'empty': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'introspect': 'True', 'static_parser': 'True', 'profiles_dir': '/home/devops/.dbt', 'hints_enabled': 'True', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'invocation_command': 'dbt list --resource-type source', 'version_check': 'True', 'write_json': 'True'}
+[0m16:45:49.404580 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/devops/kafka-airflow-dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:45:49.413421 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.47246754, "process_in_blocks": "98544", "process_kernel_time": 1.881797, "process_mem_max_rss": "93016", "process_out_blocks": "16", "process_user_time": 3.082744}
+[0m16:45:49.414626 [debug] [MainThread]: Command `dbt list` failed at 16:45:49.414383 after 0.47 seconds
+[0m16:45:49.415677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4063699f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40622e7340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40622e6c20>]}
+[0m16:45:49.417532 [debug] [MainThread]: Flushing usage events
+[0m16:45:50.017015 [debug] [MainThread]: An error was encountered while trying to flush usage events

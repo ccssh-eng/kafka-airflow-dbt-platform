@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: orders_clean
+    description: "Vue nettoyée des commandes issues du pipeline Kafka."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: amount
+        tests:
+          - not_null
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['completed', 'pending']
+      - name: created_at
+        tests:
+          - not_null
+
+      - name: order_date
+        description: "Date de la commande, issue de commandes.xlsx."
+      - name: customer_name
+        description: "Nom du client, issu de clients.xlsx (peut etre NULL si le client n'a pas de fiche)."
+      - name: region
+        description: "Region du client, issue de clients.xlsx."
+      - name: email
+        description: "Email du client, issu de clients.xlsx."
+
